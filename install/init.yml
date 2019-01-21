@@ -1,0 +1,14 @@
+---
+
+- name: Init
+  block:
+  - set_fact: ipaddress="{{ lookup('env','IPADDRESS') }}"
+  - set_fact: public_ipaddress="{{ lookup('env','PUBLIC_IPADDRESS') }}"
+
+  - debug:
+      msg: "Public IP: {{ public_ipaddress }}"  
+
+  - debug:
+      msg: "Private IP: {{ ipaddress }}"  
+
+  tags: init

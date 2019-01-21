@@ -1,0 +1,11 @@
+---
+
+- name: install software
+  hosts: all
+  tasks:
+    - import_tasks: software.yml
+    
+- name: init the system
+  hosts: all
+  tasks:
+    - import_tasks: init.yml
